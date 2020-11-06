@@ -71,7 +71,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'shoes.wsgi.application'
 
-
+print(os.environ['DJANGO_DATABASE_SHOES_NAME'])
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 #using mysql,
@@ -82,7 +82,6 @@ DATABASES = {
         'HOST': os.environ['DJANGO_DATABASE_SHOES_HOST'],
         'USER': os.environ['DJANGO_DATABASE_SHOES_USER'],
         'PASSWORD': os.environ['DJANGO_DATABASE_SHOES_PASSWORD'],
-        'PORT':'3306',
     }
 }
 
